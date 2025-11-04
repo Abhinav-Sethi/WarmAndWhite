@@ -83,8 +83,16 @@ sudo usermod -a -G docker ec2-user
 
 2. **Install Docker Compose:**
 ```bash
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# Method A: Latest Docker Compose V2 (Recommended)
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+# Method B: If Method A fails, install via pip
+sudo yum install -y python3-pip
+sudo pip3 install docker-compose
+
+# Method C: Install missing library for older versions
+sudo yum install -y libxcrypt-compat
 ```
 
 3. **Upload and deploy:**
@@ -93,6 +101,23 @@ sudo chmod +x /usr/local/bin/docker-compose
 cd /opt/warm-and-white
 docker-compose up -d
 ```
+
+4. **Access your application:**
+```bash
+# Get your EC2 public IP
+curl http://checkip.amazonaws.com
+
+# Test locally on EC2 first
+curl -I http://localhost
+
+# Then access from browser using:
+# http://YOUR-EC2-PUBLIC-IP
+```
+
+**Browser Access:**
+- Open your browser and go to: `http://YOUR-EC2-PUBLIC-IP`
+- Replace `YOUR-EC2-PUBLIC-IP` with the actual public IP of your EC2 instance
+- Example: `http://54.123.45.67`
 
 #### Method 3: Git Repository Deployment
 
@@ -105,6 +130,39 @@ sudo chown -R ec2-user:ec2-user warm-and-white
 cd warm-and-white
 docker-compose up -d
 ```
+
+**🌐 Accessing Your Application:**
+
+1. **Get your EC2 Public IP:**
+```bash
+# Method 1: From inside EC2
+curl http://checkip.amazonaws.com
+
+# Method 2: From AWS Console
+# Go to EC2 Dashboard → Instances → Select your instance → Copy "Public IPv4 address"
+```
+
+2. **Test the application:**
+```bash
+# Test locally on EC2 first
+curl -I http://localhost
+
+# Should return: HTTP/1.1 200 OK
+```
+
+3. **Access from browser:**
+   - Open your web browser
+   - Navigate to: `http://YOUR-EC2-PUBLIC-IP`
+   - Example: `http://54.123.45.67`
+
+**⚠️ Troubleshooting Access Issues:**
+
+If you can't access the site, check:
+
+1. **Security Group:** Ensure HTTP (port 80) is open
+2. **Container Status:** Run `docker-compose ps` to verify containers are running
+3. **Logs:** Check `docker-compose logs -f` for any errors
+4. **Local Test:** Verify `curl http://localhost` works on EC2
 
 ### Security Group Configuration
 
