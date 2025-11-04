@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Warm & White — Handcrafted Chocolates</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Spinner -->
+  <div id="loading" class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-icon">🍫</span>
+        <span class="brand-text">Warm & White</span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main App Container -->
+  <main id="app" class="app-container">
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Warm & White</h1>
+        <p class="hero-subtitle">Handcrafted chocolates bringing warmth to Northern India</p>
+        <p style="color: rgba(255, 255, 255, 0.9); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);">Experience the perfect blend of traditional Indian spices and premium chocolate craftsmanship. Each piece is lovingly created in small batches using locally sourced ingredients from the heart of Northern India.</p>
+        <div class="hero-cta">
+          <a href="#products" class="btn btn-primary">
+            🍫 Discover Our Collection
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            💌 Connect With Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-2">The Warm & White Experience</h2>
+        <div class="grid grid-3">
+          <div class="card text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🌶️</div>
+            <h3>Authentic Spices</h3>
+            <p>Traditional Northern Indian spices like cardamom, cinnamon, and saffron, carefully blended into our signature chocolate recipes.</p>
+          </div>
+          <div class="card text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🏔️</div>
+            <h3>Mountain Fresh</h3>
+            <p>Pure milk and cream sourced from the foothills of the Himalayas, giving our chocolates their distinctive creamy texture.</p>
+          </div>
+          <div class="card text-center">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">👐</div>
+            <h3>Handcrafted Excellence</h3>
+            <p>Every piece is individually crafted by our master chocolatiers, ensuring the perfect balance of flavor and texture.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <h1 class="text-center mb-2">About Warm & White</h1>
+        <div class="grid grid-2" style="align-items: center;">
+          <div>
+            <h2 class="text-primary mb-1">Our Story</h2>
+            <p class="mb-1">Founded in the heart of Northern India, Warm & White began as a dream to create chocolates that celebrate our rich culinary heritage. What started as a small kitchen experiment has grown into a beloved brand known for quality and innovation.</p>
+            <p class="mb-1">Our founder, inspired by the traditional sweets and spices of the region, began experimenting with chocolate recipes that would capture the essence of Northern Indian flavors while maintaining international quality standards.</p>
+            <p>Today, we continue this mission, creating chocolates that bridge tradition and modernity, bringing the warmth of Indian hospitality to every bite.</p>
+          </div>
+          <div class="card text-center">
+            <div style="font-size: 6rem; margin-bottom: 1rem;">🏠</div>
+            <h3>Family Tradition</h3>
+            <p>Three generations of chocolate making expertise</p>
+          </div>
+        </div>
+
+        <h2 class="text-center mb-2 mt-2">Our Values</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>🎯 Quality First</h3>
+            <p>We never compromise on the quality of our ingredients or the craftsmanship of our chocolates. Every batch is carefully tested and approved.</p>
+          </div>
+          <div class="card">
+            <h3>🤝 Community Support</h3>
+            <p>We work directly with local farmers and suppliers, ensuring fair prices and supporting the local economy of Northern India.</p>
+          </div>
+          <div class="card">
+            <h3>🌍 Sustainability</h3>
+            <p>From sourcing to packaging, we're committed to environmentally responsible practices that protect our planet for future generations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+      <div class="container">
+        <h1 class="text-center mb-2">Our Products</h1>
+        <p class="text-center text-secondary mb-2">Discover our carefully crafted collection of premium chocolates</p>
+        
+        <div class="grid grid-3">
+          <div class="card product-card">
+            <div class="product-image">🍫</div>
+            <h3 class="product-title">Classic Dark 70%</h3>
+            <p>Rich, intense dark chocolate with hints of vanilla and a smooth finish. Made from premium cocoa beans.</p>
+            <div class="product-price">₹350</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+
+          <div class="card product-card">
+            <div class="product-image" style="background: linear-gradient(45deg, #D2691E, #CD853F);">🥜</div>
+            <h3 class="product-title">Cashew Crunch</h3>
+            <p>Creamy milk chocolate filled with roasted cashews from local farms. A perfect blend of smooth and crunchy.</p>
+            <div class="product-price">₹400</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+
+          <div class="card product-card">
+            <div class="product-image" style="background: linear-gradient(45deg, #FF6347, #FF4500);">🌶️</div>
+            <h3 class="product-title">Spiced Masala</h3>
+            <p>Our signature blend featuring cardamom, cinnamon, and a hint of chili. A true Northern Indian experience.</p>
+            <div class="product-price">₹450</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+
+          <div class="card product-card">
+            <div class="product-image" style="background: linear-gradient(45deg, #FFE4B5, #DEB887);">🍯</div>
+            <h3 class="product-title">Himalayan Honey</h3>
+            <p>White chocolate infused with pure Himalayan honey and crunchy almonds. Sweet, nutty, and irresistible.</p>
+            <div class="product-price">₹425</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+
+          <div class="card product-card">
+            <div class="product-image" style="background: linear-gradient(45deg, #8FBC8F, #228B22);">🌿</div>
+            <h3 class="product-title">Mint Fresh</h3>
+            <p>Cool and refreshing dark chocolate with natural mint leaves. Perfect for hot Indian summers.</p>
+            <div class="product-price">₹375</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+
+          <div class="card product-card">
+            <div class="product-image" style="background: linear-gradient(45deg, #FF8C00, #FF7F50);">🎃</div>
+            <h3 class="product-title">Autumn Spice Special</h3>
+            <p>Limited edition seasonal blend with warming spices, perfect for cooler months. Available for a limited time only!</p>
+            <div class="product-price">₹525</div>
+            <button class="btn btn-primary mt-2" style="width: 100%;">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="text-center mt-2">
+          <h2 class="mb-2">Custom Orders</h2>
+          <p class="text-secondary mb-2">Planning a special event? We create custom chocolate boxes and corporate gifts.</p>
+          <a href="#contact" class="btn btn-primary">Request Custom Order</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <h1 class="text-center mb-2">Get in Touch</h1>
+        <p class="text-center text-secondary mb-2">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        
+        <div class="grid grid-2" style="align-items: start;">
+          <div class="form">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+              <div id="formMessage" class="mt-2 text-center"></div>
+            </form>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3>📍 Visit Our Workshop</h3>
+              <p>123 Chocolate Street<br>Northern India, 110001</p>
+            </div>
+            
+            <div class="card">
+              <h3>📞 Call Us</h3>
+              <p>+91 98765 43210<br>Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+            
+            <div class="card">
+              <h3>📧 Email</h3>
+              <p>hello@warmandwhite.in<br>orders@warmandwhite.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Warm & White</h3>
+          <p>Handcrafted chocolates from Northern India</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <p>📧 hello@warmandwhite.in</p>
+            <p>📍 Northern India</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Warm & White. Made with ❤️ in Northern India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
